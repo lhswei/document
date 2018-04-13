@@ -167,13 +167,13 @@ function PathPoint:IsSamePoint(point)
 end
 
 function PathPoint:UpdateG(path_point_current)
-		local point_current = path_point_current:GetPoint();
-		local g = point_current:CalcG(self.m_Point) + path_point_current:GetG();
-		if g < self:GetG() then
-			self:SetG(g);
-			self:SetParent(path_point_current);
-		end
+	local point_current = path_point_current:GetPoint();
+	local g = point_current:CalcG(self.m_Point) + path_point_current:GetG();
+	if g < self:GetG() then
+		self:SetG(g);
+		self:SetParent(path_point_current);
 	end
+end
 --======================================================
 -- path list
 local PathList = {};
@@ -384,11 +384,9 @@ function Map:FindPath(start, des)
 	return point_list;
 end
 
-
-local DEF_MAP_WIDTH 	= 10;		-- 宽度
-local DEF_MAP_HEIGHT 	= 10;		-- 高度
-local Matrix = 
-{
+local DEF_MAP_WIDTH = 10; -- 宽度
+local DEF_MAP_HEIGHT = 10; -- 高度
+local Matrix = {
 	{0, 0, 0}, {1, 0, 0}, {2, 0, 0}, {3, 0, 0}, {4, 0, 0}, {5, 0, 0}, {6, 0, 0}, {7, 0, 0}, {8, 0, 0}, {9, 0, 0}, 
 	{0, 1, 0}, {1, 1, 0}, {2, 1, 0}, {3, 1, 0}, {4, 1, 0}, {5, 1, 0}, {6, 1, 0}, {7, 1, 0}, {8, 1, 0}, {9, 1, 0}, 
 	{0, 2, 0}, {1, 2, 0}, {2, 2, 0}, {3, 2, 0}, {4, 2, 0}, {5, 2, 0}, {6, 2, 0}, {7, 2, 0}, {8, 2, 0}, {9, 2, 0}, 
@@ -418,7 +416,4 @@ local szHead = fn_format("find path {%d, %d} to {%d, %d}\n", Start[1], Start[2],
 print(szHead);
 local szPath = fn_concat(temp, "==>");
 print(szPath);
-
-
-
 
