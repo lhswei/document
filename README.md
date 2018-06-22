@@ -8,7 +8,7 @@ totalcmd 9.12 的破解key 直接放在 totalcmd 的根目录下就可以了
 #### study/lua/a_start_search.lua  
 a * 寻路算法的实现   
 
-
+```
 [global]                   
   7     workgroup = SAMBA
   8     security = user
@@ -27,3 +27,4 @@ a * 寻路算法的实现
  21     path = /home/samba
  22     writable = yes  
  23     public = yes
+```
