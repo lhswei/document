@@ -9,6 +9,7 @@ totalcmd 9.12 的破解key 直接放在 totalcmd 的根目录下就可以了
 a * 寻路算法的实现   
 
 ```
+https://www.jianshu.com/p/d6414b5295b8
 [global]                   
   7     workgroup = SAMBA
   8     security = user
